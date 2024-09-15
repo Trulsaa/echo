@@ -5,19 +5,22 @@
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --mode=production && npx mkdirp target && npx j2w -i dist.js -d combined-wit -n combined -o target/echo.wasm",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "postinstall": "knitwit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@fermyon/knitwit": "https://github.com/fermyon/knitwit",
+    "@types/jest": "^29.5.13",
+    "jest": "^29.7.0",
     "mkdirp": "^3.0.1",
+    "ts-jest": "^29.2.5",
     "ts-loader": "^9.4.1",
     "typescript": "^4.8.4",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "@fermyon/knitwit": "https://github.com/fermyon/knitwit"
+    "webpack-cli": "^4.10.0"
   },
   "dependencies": {
     "@fermyon/spin-sdk": "^2.0.0"
